@@ -589,6 +589,7 @@ class EllaSparseArray extends EmberObject.extend(EmberArray) {
       this._cleanupFinishedTasks();
     } catch (e) {
       this._requestRangeFailed(range, e);
+      throw new Error(`Error in sparse array ${e}`)
     }
   });
 }
